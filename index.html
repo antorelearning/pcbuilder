@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PC Builder Cost Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🖥️ PC Builder Cost Calculator</h1>
+    <p>Build your PC step by step — beginner-friendly</p>
+  </header>
+
+  <main>
+
+    <!-- CPU -->
+    <section class="component">
+      <h2>🧠 CPU (Required)</h2>
+      <p class="info">The brain of your PC</p>
+      <select id="cpu" onchange="updateTotal()">
+        <option value="">Select CPU</option>
+      </select>
+    </section>
+
+    <!-- Motherboard -->
+    <section class="component locked" id="mb-section">
+      <h2>🧩 Motherboard (Required)</h2>
+      <p class="info">Connects all components</p>
+      <select id="motherboard" onchange="updateTotal()">
+        <option value="">Select Motherboard</option>
+      </select>
+    </section>
+
+    <!-- RAM -->
+    <section class="component locked" id="ram-section">
+      <h2>💾 RAM (Required)</h2>
+      <p class="info">Helps your PC run smoothly</p>
+      <select id="ram" onchange="updateTotal()">
+        <option value="">Select RAM</option>
+      </select>
+    </section>
+
+    <!-- Storage -->
+    <section class="component locked" id="storage-section">
+      <h2>🗄️ Storage (Required)</h2>
+      <p class="info">Where your files and OS are stored</p>
+      <select id="storage" onchange="updateTotal()">
+        <option value="">Select Storage</option>
+      </select>
+    </section>
+
+    <!-- GPU -->
+    <section class="component">
+      <h2>🎮 GPU (Optional)</h2>
+      <p class="info">Needed for gaming & graphics</p>
+      <select id="gpu" onchange="updateTotal()">
+        <option value="">Select GPU</option>
+      </select>
+    </section>
+
+    <!-- PSU -->
+    <section class="component locked" id="psu-section">
+      <h2>🔌 Power Supply (Required)</h2>
+      <p class="info">Provides power safely</p>
+      <select id="psu" onchange="updateTotal()">
+        <option value="">Select PSU</option>
+      </select>
+    </section>
+
+    <!-- Case -->
+    <section class="component locked" id="case-section">
+      <h2>🏠 PC Case (Required)</h2>
+      <p class="info">Holds all components</p>
+      <select id="case" onchange="updateTotal()">
+        <option value="">Select Case</option>
+      </select>
+    </section>
+
+    <!-- OS -->
+    <section class="component locked" id="os-section">
+      <h2>🪟 Operating System (Required)</h2>
+      <p class="info">Allows you to use the PC</p>
+      <select id="os" onchange="updateTotal()">
+        <option value="">Select OS</option>
+      </select>
+    </section>
+
+    <!-- Monitor -->
+    <section class="component">
+      <h2>🖥️ Monitor (Optional)</h2>
+      <p class="info">Where you can see all the things</p>
+      <select id="monitor" onchange="updateTotal()">
+        <option value="">Select Monitor</option>
+      </select>
+    </section>
+
+    <!-- Keyboard -->
+    <section class="component">
+      <h2>⌨️ Keyboard (Optional)</h2>
+      <p class="info">To type anything</p>
+      <select id="keyboard" onchange="updateTotal()">
+        <option value="">Select Keyboard</option>
+      </select>
+    </section>
+
+    <!-- Mouse -->
+    <section class="component">
+      <h2>🖱️ Mouse (Optional)</h2>
+      <p class="info">To move the cursol</p>
+      <select id="mouse" onchange="updateTotal()">
+        <option value="">Select Mouse</option>
+      </select>
+    </section>
+
+    <!-- Total -->
+    <section class="total">
+      <h2>Total Cost</h2>
+      <p id="total-price">$0</p>
+    </section>
+
+  </main>
+
+  <!-- Data and Script -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
